@@ -11,7 +11,7 @@ protected:
 	bool canDoAction();
 
 public:
-	ClapTrap(std::string name);
+	ClapTrap(std::string n);
 	~ClapTrap();
 	ClapTrap(const ClapTrap& other);
 	ClapTrap& operator=(const ClapTrap& other);

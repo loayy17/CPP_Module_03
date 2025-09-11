@@ -1,6 +1,6 @@
 #include "ScavTrap.hpp"
 #include <iostream>
-ScavTrap::ScavTrap(std::string name) : ClapTrap(name), inGateKeeperMode(false)
+ScavTrap::ScavTrap(std::string n) : ClapTrap(n), inGateKeeperMode(false)
 {
 	hitPoints = 100;
 	energyPoints = 50;
