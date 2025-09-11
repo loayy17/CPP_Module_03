@@ -1,8 +1,9 @@
-#include <iostream>
 #include "DiamondTrap.hpp"
-DiamondTrap::DiamondTrap(std::string n) : ClapTrap(n + "_clap_name"), ScavTrap(n), FragTrap(n), name(n)
+#include <iostream>
+DiamondTrap::DiamondTrap(std::string n)
+    : ClapTrap(n + "_clap_name"), ScavTrap(n), FragTrap(n), name(n)
 {
-	hitPoints = 100; // FragTrap's hitPoints
+	hitPoints = 100;   // FragTrap's hitPoints
 	energyPoints = 50; // ScavTrap's energyPoints
 	attackDamage = 30; // FragTrap's attackDamage
 	std::cout << "DiamondTrap " << name << " created!" << std::endl;
@@ -14,7 +15,7 @@ DiamondTrap::~DiamondTrap()
 }
 
 DiamondTrap::DiamondTrap(const DiamondTrap& other)
-	: ClapTrap(other), ScavTrap(other), FragTrap(other), name(other.name)
+    : ClapTrap(other), ScavTrap(other), FragTrap(other), name(other.name)
 {
 	std::cout << "DiamondTrap " << other.name << " copied!" << std::endl;
 }
