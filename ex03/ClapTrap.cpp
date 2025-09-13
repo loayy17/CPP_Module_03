@@ -36,7 +36,7 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& other)
 
 void ClapTrap::attack(const std::string& target)
 {
-	if (!canDoAction())
+	if (!canDoAction("ClapTrap"))
 		return;
 	std::cout << "ClapTrap " << name << " attacks " << target << ", causing "
 	          << attackDamage << " points of damage!" << std::endl;
@@ -56,7 +56,7 @@ void ClapTrap::takeDamage(unsigned int amount)
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
-	if (!canDoAction())
+	if (!canDoAction("ClapTrap"))
 		return;
 
 	hitPoints += amount;
@@ -65,19 +65,19 @@ void ClapTrap::beRepaired(unsigned int amount)
 	energyPoints--;
 }
 
-bool ClapTrap::canDoAction()
+bool ClapTrap::canDoAction(std::string className)
 {
 	if (hitPoints <= 0)
 	{
-		std::cout << "ClapTrap " << name << " is out of hit points!"
-		          << std::endl;
-		return false;
+          std::cout << className << " " << name << " is out of hit points!"
+                    << std::endl;
+          return false;
 	}
 	if (energyPoints <= 0)
 	{
-		std::cout << "ClapTrap " << name << " is out of energy points!"
-		          << std::endl;
-		return false;
+          std::cout << className << " " << name << " is out of energy points!"
+                    << std::endl;
+          return false;
 	}
 	return true;
 }

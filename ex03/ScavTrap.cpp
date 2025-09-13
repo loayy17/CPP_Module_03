@@ -26,6 +26,15 @@ ScavTrap& ScavTrap::operator=(const ScavTrap& other)
 	std::cout << "ScavTrap assigned!" << std::endl;
 	return *this;
 }
+void ScavTrap::attack(const std::string& target)
+{
+	if(!canDoAction("ScavTrap"))
+		return;
+	energyPoints--;
+	std::cout << "ScavTrap " << name << " attacks " << target
+	          << ", causing " << attackDamage << " points of damage!"
+	          << std::endl;
+}
 void ScavTrap::guardGate()
 {
 	if (!inGateKeeperMode)

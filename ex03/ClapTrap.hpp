@@ -8,7 +8,7 @@ protected:
 	unsigned int hitPoints;
 	unsigned int energyPoints;
 	unsigned int attackDamage;
-	bool canDoAction();
+	bool canDoAction(std::string className);
 
 public:
 	ClapTrap(std::string n);
