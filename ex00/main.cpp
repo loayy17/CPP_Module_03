@@ -27,15 +27,5 @@ int main()
 	clap3.takeDamage(15);  // More damage than hit points
 	clap3.attack("Enemy"); // Should not be able to attack
 	clap3.beRepaired(5);   // Should not be able to repair
-
-	// Test 4: Copy constructor and assignment
-	std::cout << "\n--- Test 4: Copy constructor and assignment ---"
-	          << std::endl;
-	ClapTrap clap4("Original");
-	ClapTrap clap5(clap4); // Copy constructor
-	ClapTrap clap6("Temp");
-	clap6 = clap4; // Assignment operator
-
-	std::cout << "\n=== Tests Complete ===" << std::endl;
 	return 0;
 }

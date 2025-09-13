@@ -31,11 +31,13 @@ void ScavTrap::guardGate()
 	if (!inGateKeeperMode)
 	{
 		inGateKeeperMode = true;
-		std::cout << "ScavTrap is now in Gate Keeper mode." << std::endl;
+		std::cout << "ScavTrap: " << name << " is now in Gate Keeper mode."
+		          << std::endl;
 	}
 	else
 	{
 		inGateKeeperMode = false;
-		std::cout << "ScavTrap has exited Gate Keeper mode." << std::endl;
+		std::cout << "ScavTrap: " << name << " has exited Gate Keeper mode."
+		          << std::endl;
 	}
 }
